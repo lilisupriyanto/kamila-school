@@ -4,11 +4,416 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />
-    <title>Simple Tailwind Starter</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Kamila-School</title>
   </head>
   <body>
-    <h1 class="text-4xl mb-4">Welcome</h1>
-    <p>Start building your Tailwind project</p>
+    <!-- Hero Section -->
+    <section id="hero">
+      <!-- Hero Container -->
+      <div class="container max-w-6xl mx-auto px-6 py-12">
+        <!-- Menu/Logo Container -->
+        <nav class="flex items-center justify-between font-bold text-black">
+          <!-- Logo -->
+          <img src="images/logo.png" alt="" />
+          <!-- Menu -->
+          <div class="hidden h-10 font-alata md:flex md:space-x-8">
+            <div class="group">
+              <a href="#">Tentang</a>
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-black"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">Karir</a>
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-black"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">Kegiatan</a>
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-black"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">Produk</a>
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-black"
+              ></div>
+            </div>
+            <div class="group">
+              <a href="#">Dukungan</a>
+              <div
+                class="mx-2 group-hover:border-b group-hover:border-black"
+              ></div>
+            </div>
+          </div>
+          <!-- Hamburger Button -->
+          <div class="md:hidden">
+            <button
+              id="menu-btn"
+              type="button"
+              class="z-40 block hamburger md:hidden focus:outline-none"
+            >
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div
+          id="menu"
+          class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-black uppercase bg-white"
+        >
+          <a href="#" class="hover:text-pink-500">Tentang</a>
+          <a href="#" class="hover:text-pink-500">Karir</a>
+          <a href="#" class="hover:text-pink-500">Kegiatan</a>
+          <a href="#" class="hover:text-pink-500">Produk</a>
+          <a href="#" class="hover:text-pink-500">Dukungan</a>
+        </div>
+
+        <div
+          class="max-w-lg mt-32 mb-32 p-4 font-sans text-6xl text-black uppercase border-2 border-black md:p-10 md:m-32 md:mx-0 md:text-6xl rounded-md"
+        >
+          Sekolah Mandiri Bermanfaat Bagi Negeri
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section id="feature">
+      <!-- Feature Container -->
+      <div
+        class="relative container flex flex-col max-w-6xl mx-auto my-32 px-6 text-gray-900 md:flex-row md:px-0"
+      >
+        <!-- Image -->
+        <img
+          class="rounded-lg"
+          src="images/desktop/image-interactive.png"
+          alt=""
+        />
+
+        <!-- Text Container -->
+        <div
+          class="top-48 pr-0 bg-white md:absolute md:right-0 md:py-20 md:pl-20 rounded-lg"
+        >
+          <h2
+            class="max-w-lg mt-10 mb-6 font-sans text-4xl text-center text-gray-900 uppercase md:text-5xl md:mt-0 md:text-left"
+          >
+            Sekolah Riset Pertama
+          </h2>
+
+          <p class="max-w-md text-center md:text-left">
+            Didirikan pada tahun 2019, <i><b>Kamila-Shool</b></i> telah
+            meluluskan siswa dan masuk ke sekolah lanjutan terbaik di dunia.
+            Karya kami telah mengubah dunia serta memenangkan penghargaan
+            <i><b>World Record</b></i
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creations Section -->
+    <section id="creations">
+      <!-- Creations Container -->
+      <div class="container max-w-6xl mx-auto my-32 px-6 text-gray-900 md:px-0">
+        <!-- Creations Header -->
+        <div class="flex justify-center mb-20 md:justify-between">
+          <h2 class="text-4xl text-center uppercase md:text-left md:text-5xl">
+            Karya Kami
+          </h2>
+
+          <button class="hidden btn md:block rounded-md">Lihat Semua</button>
+        </div>
+
+        <!-- Items Container -->
+        <div class="item-container">
+          <!-- Item 1 -->
+          <div class="group item">
+            <!-- Desktop Image -->
+            <img
+              src="images/desktop/image-kupu.png"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- Mobile Image -->
+            <img
+              src="images/mobile/image-kupu.png"
+              alt=""
+              class="w-full md:hidden"
+            />
+            <!-- Item Gradient -->
+            <div class="item-gradient"></div>
+            <!-- Item Text -->
+            <h5>Kupu</h5>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="group item">
+            <!-- Desktop Image -->
+            <img
+              src="images/desktop/image-pesawat.png"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- Mobile Image -->
+            <img
+              src="images/mobile/image-pesawat.png"
+              alt=""
+              class="w-full md:hidden"
+            />
+            <!-- Item Gradient -->
+            <div class="item-gradient"></div>
+            <!-- Item Text -->
+            <h5>Pesawat</h5>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="group item">
+            <!-- Desktop Image -->
+            <img
+              src="images/desktop/image-burung.png"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- Mobile Image -->
+            <img
+              src="images/mobile/image-burung.png"
+              alt=""
+              class="w-full md:hidden"
+            />
+            <!-- Item Gradient -->
+            <div class="item-gradient"></div>
+            <!-- Item Text -->
+            <h5>Burung</h5>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="group item">
+            <!-- Desktop Image -->
+            <img
+              src="images/desktop/image-dino.png"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- Mobile Image -->
+            <img
+              src="images/mobile/image-dino.png"
+              alt=""
+              class="w-full md:hidden"
+            />
+            <!-- Item Gradient -->
+            <div class="item-gradient"></div>
+            <!-- Item Text -->
+            <h5>Dino</h5>
+          </div>
+        </div>
+
+        <!-- Item Container 2 -->
+        <div class="item-container mt-10">
+          <!-- Item 1 -->
+          <div class="group item">
+            <!-- Desktop Image -->
+            <img
+              src="images/desktop/image-merpati1.png"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- Mobile Image -->
+            <img
+              src="images/mobile/image-merpati1.png"
+              alt=""
+              class="w-full md:hidden"
+            />
+            <!-- Item Gradient -->
+            <div class="item-gradient"></div>
+            <!-- Item Text -->
+            <h5>Merpati 1</h5>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="group item">
+            <!-- Desktop Image -->
+            <img
+              src="images/desktop/image-merpati2.png"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- Mobile Image -->
+            <img
+              src="images/mobile/image-merpati2.png"
+              alt=""
+              class="w-full md:hidden"
+            />
+            <!-- Item Gradient -->
+            <div class="item-gradient"></div>
+            <!-- Item Text -->
+            <h5>Merpati 2</h5>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="group item">
+            <!-- Desktop Image -->
+            <img
+              src="images/desktop/image-merpati3.png"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- Mobile Image -->
+            <img
+              src="images/mobile/image-merpati3.png"
+              alt=""
+              class="w-full md:hidden"
+            />
+            <!-- Item Gradient -->
+            <div class="item-gradient"></div>
+            <!-- Item Text -->
+            <h5>Merpati 3</h5>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="group item">
+            <!-- Desktop Image -->
+            <img
+              src="images/desktop/image-merpati4.png"
+              alt=""
+              class="hidden w-full duration-200 md:block group-hover:scale-110"
+            />
+            <!-- Mobile Image -->
+            <img
+              src="images/mobile/image-merpati4.png"
+              alt=""
+              class="w-full md:hidden"
+            />
+            <!-- Item Gradient -->
+            <div class="item-gradient"></div>
+            <!-- Item Text -->
+            <h5>Merpati 4</h5>
+          </div>
+        </div>
+        <!-- Bottom Button Container -->
+        <div class="flex justify-center mt-10 md:hidden">
+          <button class="btn w-full md:hidden rounded-md">Lihat Semua</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-black">
+      <!-- Container -->
+      <div class="container max-w-6xl py-10 mx-auto">
+        <!-- Footer Flex Container -->
+        <div
+          class="flex flex-col items-center mb-8 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start"
+        >
+          <!-- Menu & Logo Container -->
+          <div
+            class="flex flex-col items-center space-y-8 md:items-start md:space-y-4"
+          >
+            <!-- Logo -->
+            <div class="h-8">
+              <a href="#"
+                ><img src="images/logo-footer.png" alt="" class="w-44 md:ml-3"
+              /></a>
+            </div>
+            <!-- Menu Container -->
+            <div
+              class="flex flex-col items-center space-y-4 font-bold text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3"
+            >
+              <!-- Item 1 -->
+              <div class="h-10 group">
+                <a href="#">Tentang</a>
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-white"
+                ></div>
+              </div>
+              <!-- Item 2 -->
+              <div class="h-10 group">
+                <a href="#">Karir</a>
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-white"
+                ></div>
+              </div>
+              <!-- Item 3 -->
+              <div class="h-10 group">
+                <a href="#">Kegiatan</a>
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-white"
+                ></div>
+              </div>
+              <!-- Item 4 -->
+              <div class="h-10 group">
+                <a href="#">Produk</a>
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-white"
+                ></div>
+              </div>
+              <!-- Item 5 -->
+              <div class="h-10 group">
+                <a href="#">Dukungan</a>
+                <div
+                  class="mx-2 group-hover:border-b group-hover:border-white"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social & Copy Container -->
+          <div
+            class="flex flex-col items-start justify-between space-y-4 text-gray-500"
+          >
+            <!-- icons Container -->
+            <div
+              class="flex items-center justify-center mx-auto space-x-4 md:justify-end md:mx-0"
+            >
+              <!-- Icon 1 -->
+              <div class="h-8 group">
+                <a href="#">
+                  <img src="images/icon-facebook.svg" alt="" class="h-6" />
+                </a>
+              </div>
+              <!-- Icon 2 -->
+              <div class="h-8 group">
+                <a href="#">
+                  <img src="images/icon-twitter.svg" alt="" class="h-6" />
+                </a>
+              </div>
+              <!-- Icon 3 -->
+              <div class="h-8 group">
+                <a href="#">
+                  <img src="images/icon-pinterest.svg" alt="" class="h-6" />
+                </a>
+              </div>
+              <!-- Icon 4 -->
+              <div class="h-8 group">
+                <a href="#">
+                  <img src="images/icon-instagram.svg" alt="" class="h-6" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Copy -->
+            <div class="font-bold text-white">
+              &copy;2024 Kamila-School. All Rights Reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
